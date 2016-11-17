@@ -19,9 +19,9 @@
 
         <div ng-repeat="timezone in timezones">
 
-          <h4>[[timezone[0]]]</h4>
+          <h4>[[ timezone[0] ]]</h4>
 
-          <div date-picker="dates.today" timezone="[[timezone[1]]]" view="hours" min-view="hours" watch-direct-changes="true"></div>
+          <div date-picker="dates.today" timezone="[[ timezone[1] ]]" view="hours" min-view="hours" watch-direct-changes="true"></div>
 
           <hr />
 
@@ -36,8 +36,8 @@
 
       <h2>Custom formats</h2>
       <div ng-repeat="format in formats">
-        <h5>[[format]]</h5>
-        <input type="text" date-time ng-model="dates.today" view="hours" format="[[format]]">
+        <h5>[[ format ]]</h5>
+        <input type="text" date-time ng-model="dates.today" view="hours" format="[[ format ]]">
       </div>
 
     </div>
@@ -68,17 +68,17 @@
 
       <form name="demoForm">
       <div>
-        <h5>Min ([[demoForm.pickerMinDate.$error.min ? 'Min: invalid' : 'Min: valid']])</h5>
+        <h5>Min ([[ demoForm.pickerMinDate.$error.min ? 'Min: invalid' : 'Min: valid' ]])</h5>
         <input date-time name="pickerMinDate" ng-model="dates.today" id="pickerMinDate" min-date="minDate" view="date" min-view="hours" timezone="UTC" format="lll">
       </div>
 
       <div>
-        <h5>Max ([[demoForm.pickerMaxDate.$error.max ? 'Max: invalid' : 'Max: valid']])</h5>
+        <h5>Max ([[ demoForm.pickerMaxDate.$error.max ? 'Max: invalid' : 'Max: valid' ]])</h5>
         <input date-time name="pickerMaxDate" ng-model="dates.today" id="pickerMaxDate" max-date="maxDate" view="date" min-view="hours" timezone="UTC" format="lll">
       </div>
 
       <div>
-        <h5>Min + max ([[demoForm.pickerBothDates.$error.min ? 'Min: invalid, ' : 'Min: valid, ']] [[demoForm.pickerBothDates.$error.max ? 'max: invalid' : 'max: valid']])</h5>
+        <h5>Min + max ([[ demoForm.pickerBothDates.$error.min ? 'Min: invalid, ' : 'Min: valid, ']] [[ demoForm.pickerBothDates.$error.max ? 'max: invalid' : 'max: valid' ]])</h5>
         <input date-time name="pickerBothDates" ng-model="dates.today" id="pickerBothDates" min-date="minDate" max-date="maxDate" view="date" min-view="hours" timezone="UTC" format="lll">
       </div>
     </form>
