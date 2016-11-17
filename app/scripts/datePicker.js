@@ -1,6 +1,11 @@
 'use strict';
 var Module = angular.module('datePicker', []);
 
+Module.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('[[');
+  $interpolateProvider.endSymbol(']]');
+});
+
 Module.constant('datePickerConfig', {
   template: 'templates/datepicker.html',
   view: 'month',
